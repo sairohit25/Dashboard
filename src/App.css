@@ -1,0 +1,268 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.profupl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Ensure Div 1 and Div 2 share equal width */
+.profile, .upload {
+  flex: 1;
+  max-width: 100%;
+
+}
+
+/* General Alignment for Profile and Upload Divs */
+.profupl {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the content */
+}
+
+.profile,
+.upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f4f8);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover,
+.upload:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Specific Styling */
+.profile h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.profile-details {
+  margin-top: 10px;
+}
+
+.profile-details p {
+  font-size: 1rem;
+  color: #555;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-details p i {
+  color: #007bff;
+  font-size: 1.5rem;
+}
+
+/* Upload Specific Styling */
+.upload h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.upload input[type="file"] {
+  display: inline-block;
+  padding: 12px;
+  border: 2px dashed #007bff;
+  border-radius: 10px;
+  background: #eef6ff;
+  color: #555;
+  margin-bottom: 15px;
+  width: 80%;
+  max-width: 300px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.upload input[type="file"]:hover {
+  border-color: #0056b3;
+  background: #e2f0ff;
+}
+
+.upload .btn-primary {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.upload .btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #003f8a);
+  transform: scale(1.05);
+}
+
+
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin: 0 0 10px;
+  color: #333333;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Div 1: User Profile */
+.profile-details p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+  
+}
+
+.profile-details i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* Div 2: Upload Excel File */
+.upload {
+  text-align: center;
+}
+
+.upload input {
+  margin-bottom: 10px;
+}
+
+/* Flex Behavior for Tables */
+.extracted-data,
+.owner-details,
+.add-owner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Scrollable Table Styles */
+.extracted-data table,
+.owner-details table {
+  display: block;
+  max-height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ddd;
+  scrollbar-width: none;
+}
+
+.extracted-data thead,
+.owner-details thead {
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f4;
+}
+
+.extracted-data tbody,
+.owner-details tbody {
+  display: block;
+}
+
+.extracted-data th,
+.extracted-data td,
+.owner-details th,
+.owner-details td {
+  min-width: 150px;
+}
+
+.owner-details table::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  align-self: flex-start;
+}
+
