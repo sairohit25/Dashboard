@@ -70,17 +70,30 @@ body {
 }
 
 .profile-details p {
-  font-size: 1rem;
+  font-size: 16px;
   color: #555;
-  margin: 8px 0;
+  margin: 10px 0;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.profile-details p i {
+.profile-details i {
   color: #007bff;
   font-size: 1.5rem;
+}
+
+.profile-details .label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 5px;
+  white-space: nowrap; /* Keeps label and value on the same line */
+}
+
+.profile-details .value {
+  color: #555;
+  font-weight: normal; /* Ensures value style is not bold */
+  overflow-wrap: break-word; /* Handles long content gracefully */
 }
 
 /* Upload Specific Styling */
@@ -266,3 +279,61 @@ form button {
   align-self: flex-start;
 }
 
+/* Button Styling */
+.upload-button-container {
+  text-align: right;
+  margin-top: 20px; /* Add space above the button */
+}
+
+.upload-button-container .btn-primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.upload-button-container .btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #003f8a);
+  transform: scale(1.05);
+}
+
+.icon.minimize {
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.icon.minimize.collapsed {
+  transform: rotate(180deg);
+}
+
+.card .extracted-data .add-owner .owner-details {
+  position: relative;
+}
+
+.collapse-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;  
+  color: #333;
+}
+
+.collapse-button:hover {
+  color: #007bff;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
